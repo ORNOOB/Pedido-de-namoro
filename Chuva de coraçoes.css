@@ -3,13 +3,23 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #080808;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
 .conteudo {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 60px;
+    justify-content: space-between;
+    text-align: center;
 }
+
 .conteudo h1 {
     font-size: 28px;
     text-align: center;
@@ -42,20 +52,34 @@ button {
 }
 
 .painel {
-    position: absolute;
+    position: relative;
     z-index: 2;
-    top: 150px;
-    left: 700px;
 
-    width: 500px;
-    height: 500px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 420px;
+
     background: white;
+    border-radius: 30px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+
+    padding: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container-coracoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+    z-index: 1;
 }
 
 .coracao { 
@@ -109,5 +133,18 @@ button {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+@media (max-width: 600px) {
+    .conteudo h1 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .botoes {
+        flex-direction: column;
     }
 }
