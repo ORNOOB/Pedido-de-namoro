@@ -60,7 +60,7 @@ button {
     max-width: 500px;
     min-height: 420px;
 
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(4px);
     border-radius: 30px;
 
@@ -155,6 +155,7 @@ button {
     }
   }
 }
+
 
 
 
