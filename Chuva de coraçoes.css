@@ -150,16 +150,15 @@ button {
     }
 }
 @media (max-width: 600px) {
-    .conteudo h1 {
-        font-size: 22px;
+    .painel {
+        min-height: 340px;
+        padding: 15px;
     }
 
-    button {
-        width: 100%;
+    .interno {
+        padding: 18px;
     }
-
-    .botoes {
-        flex-direction: column;
-    }
+  }
 }
+
 
