@@ -1,13 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const containerCoracoes = document.getElementById("container-coracoes");
+
     for (let i = 0; i < 200; i++) {
         const coracao = document.createElement("div");
         coracao.className = "coracao";
-        coracao.style.left = Math.random() * window.innerWidth + "px";
+
+        coracao.style.left = Math.random() * 100 + "vw";
+        coracao.style.top = "-60px";
         coracao.style.animationDuration = (Math.random() * 8 + 5) + "s";
+
         containerCoracoes.appendChild(coracao);
     }
 });
+
 const botaoNao = document.querySelector(".btn-nao");
 
 function fugir(e) {
