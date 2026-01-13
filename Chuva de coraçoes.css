@@ -61,7 +61,7 @@ button {
     min-height: 420px;
 
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     border-radius: 30px;
 
     display: flex;
@@ -155,6 +155,7 @@ button {
     }
   }
 }
+
 
 
 
