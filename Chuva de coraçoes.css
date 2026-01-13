@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #080808;
+}
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+.conteudo h1 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn-sim {
+    background-color: #ff2d55;
+    color: white;
+}
+
+.btn-nao {
+    position: relative;
+    transition: transform 0.05s linear;
+    background-color: #555;
+    color: white;
+}
+
+.painel {
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    left: 700px;
+
+    width: 500px;
+    height: 500px;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.coracao { 
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    border-radius: 0 0 0 10px;
+    animation: fall linear infinite;
+    background-color: #ff002f;
+}           
+.coracao:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ff002f;
+    left: 0;
+    top: -50%;
+}
+.coracao:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ff002f;
+    top: 0%;
+    right: -50%;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(-45deg);
+        opacity: 3;
+    }
+    100% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+.painel {
+    animation: aparecer 1s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
